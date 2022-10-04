@@ -1,102 +1,73 @@
-# D3 Brushing and Linking
+# hw-06
+hw-06 - Brushing and Linking
 
-This repository is your starting point for hw-06. Assignment details and instructions are below. 
+Link to GitHub Pages: `[insert your clickable hyperlink here]`
 
-Link to your GitHub pages website: `[insert your *clickable* hyperlink here]`
+Clone this repo and work locally. Be sure to push the final version of your code (and any significant updates along the way) before submitting. To work locally, you will need to set up a Python Simple Server. Instructions for this are included below.  
 
-# Aim of the assignment
+## Purpose
 
-The purpose of this assignment is to help you get started with brushing and linking which you will need for your project. 
+The purpose of this assignment is to practice creating a coordinated, multiview visualization.  
 
-# Background
-Please look through **all** the materials below before starting. This will ensure you understand the setup instructions; how to run, organize, and submit your code; and requirements for the assignment.
+## Instructions
 
-You should do all your edits locally after cloning this repository. Commit major versions to your git repository.
+1. Resources to support this assignment are provided in the Resources section below.  
 
-1. Clone this repository to your local machine.
-   - In your terminal / command prompt `CD` to where you want this the folder for this activity to be. Then run `git clone <YOUR_REPO_URL>`
+1. You can find a reference for what your final webpage should look like in the "reference" folder of your cloned directory. 
 
-1. In order to read data from csv files, you will need to use a python simple server. To do that follow these steps:
-   - `CD` or open a terminal / command prompt window into the folder you cloned above.
-   - Start a python simple server from that folder with one of these commands (depending on how you set python up on your machine): `python -m http.server`, `python3 -m http.server`, or `py -m http.server`. 
-   - If you are using python 2 you will need to use `python -m SimpleHTTPServer` instead, but please switch to python 3 as [Python 2 was sunset on 2020-01-01](https://www.python.org/doc/sunset-python-2/).
-   - After running the command, wait for the output: `Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)`.
-   - Open your web browser (Firefox or Chrome) and navigate to the URL: http://localhost:8000. This is where you will see your code rendered. 
+1. Create a GitHub Page for your repo and add the link to your GitHub Page above where you see `[insert your clickable hyperlink here]`. 
 
-## Update hyperlinks
+1. Using the index.html file included in your repo, an *external* stylesheet (no styling should be done inline; it should all be done via external css), and an *external* javascript file (no javascript code should be included in your html file; it should all be done via external js) please do the following: 
 
-1. Edit near the top of this `README.md` file to include a clickable hyperlink to the GitHub pages website for your repo. Replace `` `[insert your *clickable* hyperlink here]` `` with your clickable URL. 
+   - Make all font on your webpage Arial. 
+   - Add a title: "hw-06".
+   - Add a centered header: "hw-06 - D3 Brushing & Linking".
+   - Add a sub-header: "Iris Data".
+   - Create three columns on your webpage, they should be even thirds of the page.
+   - In the left column, use D3 to create a Petal_Length vs Sepal_Length scatterplot. Choose three appropriate colors (think about color maps and data types) to represent the species of each point. Color points accordingly, with 50% opacity.  
+   - In the middle column, use D3 to create a Petal_Width vs Sepal_Width scatterplot. Color points as you did for the first scatterplot.
+   - In the right column, create a bar chart that shows count of each iris species in the dataset. There are 50 of each type, and you may hard code the data for this plot. Color bars to match the coloring of points in the scatterplots. 
+   - Finally, add brushing and linking. 
+      - If the user brushes over points in the first scatter plot, corresponding points in the second scatter plot should be highlighted with increased opacity and an orange border. 
+      - If the user brushes over points in the secong scatter plot, corresponding points in the first scatter plot should be highlighted with increased opacity and an orange border, and corresponding bars should be highlighted with black borders in the bar chart.
+      - See the reference video for an example. Notice in the video that an existing brush is cleared when a new brush is started.   
+   - Add a centered header to the bottom of your page. The header should say "Acknowledgements" in font smaller than the font used for your first header. Under this header, add a div. Inside of this div add a bulleted list of the resources you used to complete this assignment.  
 
-1. In `index.html` update the GitHub repo URL with the URL of your repository. It is in the span with `id='forkongithub'`.
+## Python Simple Server
 
-## Organization
+- In order to read data from csv files, you will need to use a python simple server. To do that, follow these steps:
+  - `CD` or open a terminal / command prompt window in the same folder that holds your website code.
+  - Start a python simple server with one of these commands (depending on how you set python up on your machine): `python -m http.server`, `python3 -m http.server`, or `py -m http.server`. 
+  - After running the command, wait for the output: `Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)`.
+  - Open your web browser (Firefox or Chrome) and navigate to the URL: http://localhost:8000. This is where you will see your code rendered. 
 
-Here is an overview of the files and folders we provide for you in your repo.
+## Resources 
 
-### Root Files
-* `README.md` is this explanatory file.
+* [HTML Page on w3schools](https://www.w3schools.com/html/default.asp). (On the left-hand side of the page there is a menu bar with links to various topics.) 
 
-* `index.html` contains the main website content.
+* [CSS Page on w3schools](https://www.w3schools.com/css/default.asp). (On the left-hand side of the page there is a menu bar with links to various topics.) 
 
-* `style.css` contains the CSS.
+**Note that there are different versions of D3 (we are using version 6), so make sure the tutorials you use are up-to-date (or you at least understand what is different about v6 versus older versions).**
 
-* `LICENCE` is the source code license for the template. You can add your name or leave it as is.
+* [Intro to D3 - Creative Coding for the Web](https://www.fluidencodings.com/teaching-materials/cc-for-the-web/v1/page.php?pid=svg)
 
-### Folders
-Each folder has an explanatory `README.md` file.
+* [D3 Data Joins - Creative Coding for the Web](https://www.fluidencodings.com/teaching-materials/cc-for-the-web/v1/page.php?pid=data-joins) 
 
-* `data` holds the data file for the visualization, `iris.csv`.
+* Intro to D3 in 10 basic examples: https://www.d3-graph-gallery.com/intro_d3js.html (highly recommend this resource)
 
-* `favicons` contains the favicons for the web page. You shouldn't change anything here.
+* D3 Coursera by Enrico Bertini: https://www.coursera.org/learn/information-visualization-programming-d3js
 
-* `.github` contains [GitHub Actions](https://github.com/features/actions) ([docs](https://docs.github.com/en/actions)) which will automatically validate your HTML, CSS, and hyperlinks when you push (see the [**validation last step** below](#validated)). **Do not edit files here** except to create new `.yml` files for any additional actions you choose to add (you are not required to make any).
+* What is D3? https://d3js.org/
 
-* `img` contains a descriptive image for the `README.md`.
+* Example D3 Charts: https://observablehq.com/@d3/gallery
 
-* `js` will contain all JavaScript files you write. For example, 
+* Interactive Data Visualization for the Web by Scott Murray: Available through Northeastern Library
 
-  * `brushingandlinkingstarter.js` is the main code that builds all your visualizations.
+* Tips and Tricks: https://leanpub.com/D3-Tips-and-Tricks/read (written for v3 but well written)
 
-* `lib` will contain any JavaScript library you use. It currently includes D3. To ensure long-term survivability, **use the included D3 here rather than linking to [d3js.org](https://d3js.org) or some other CDN.** Likewise, put your other libraries here rather than loading them from elsewhere.
+* Brushing: https://d3-graph-gallery.com/graph/interactivity_brush.html#realgraph 
 
-## Resources
+## Submission
 
-* Brushing with D3: [https://www.d3-graph-gallery.com/graph/interactivity_brush.html](https://www.d3-graph-gallery.com/graph/interactivity_brush.html)
-
-
-# Instructions 
-
-The starter code provided to you creates a Scatterplot showing Petal Length vs. Sepal Length for the Iris dataset. Your task is to do the following:
-
-1. Add another Scatterplot that shows Petal Width vs. Sepal Width
-
-1. Add a barchart that shows counts of each Iris species in the dataset. 
-
-1. Implement brushing and linking such that a user can select points in the first Scatterplot, and corresponding points in the second Scatterplot will be highlighted by bold borders.   
-
-1. Implement brushing and linking such that a user can select points in the second Scatterplot, and corresponding points in the first Scatterplot will be highlighted by bold borders. In addition, when points are selected in the second Scatterplot species included in that selection should be highlighted on the bar chart by bold borders. 
-
-The support code provided includes comments pre-fixed "TODO". Anywhere you see one of these comments is a place where you need to add code to the starter code. 
-
-In the reference folder you will find a video of what your end proudct should look like.     
-
-
-# Academic integrity
-
-You are welcome to use D3 tutorials or resources as a starting point for your code.
-However, **you must cite and reference the resources or sample code you use and explain how you use them**.
-***This includes anything from [bl.ocks.org](https://bl.ocks.org/), [Observable](https://observablehq.com/@d3/gallery), or [Stack Overflow](https://stackoverflow.com/)!***
-Failure to properly cite and attribute code is a breach of academic integrity.
-
-Additionally, you should under no circumstances copy a classmate's code. You are welcome to ask fellow classmates and students for help and discuss the assignment, but **your submission should be your own work**.
-See Canvas for more detail on our academic integrity policy and expectations.
-
-# Submission
-
-1. Ensure you updated (1) the GitHub Pages URL at the top of this `README.md` file and (2) the GitHub repository URL in `index.html` in the span with `id='forkongithub'`.
-
-1. Commit all your local files and push them to the remote repository on GitHub which was generated by GitHub Classroom. We will grade based on what is visible on the GitHub Page.
-
-1. Ensure all functionality required above is present in your GitHub page.
-
-1. Create a PDF that contains the URL of your **GitHub Classroom-generated repository** and **submit it on gradescope via hw-06**. Do not submit a link to a personal repository; your repo must be within our class GitHub organization.
+* Be sure to push all changes to your repo and follow all instructions above. 
+* Submit your assignment on Gradescope  
